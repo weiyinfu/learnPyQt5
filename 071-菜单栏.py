@@ -1,10 +1,10 @@
 import sys
-from PyQt5.QtWidgets import QMainWindow, QAction, qApp, QApplication
-from PyQt5.QtGui import QIcon
+
+from PyQt6.QtGui import QIcon, QAction
+from PyQt6.QtWidgets import QMainWindow, QApplication
 
 
 class Example(QMainWindow):
-
     def __init__(self):
         super().__init__()
 
@@ -14,7 +14,7 @@ class Example(QMainWindow):
         exitAction = QAction(QIcon('web.png'), '&Exit', self)
         exitAction.setShortcut('Ctrl+Q')
         exitAction.setStatusTip('Exit application')
-        exitAction.triggered.connect(qApp.quit)
+        exitAction.triggered.connect(QApplication.quit)
 
         self.statusBar()
 
@@ -32,4 +32,4 @@ class Example(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

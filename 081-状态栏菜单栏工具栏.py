@@ -1,7 +1,7 @@
 import sys
 
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QMainWindow, QTextEdit, QAction, QApplication
+from PyQt6.QtGui import QIcon, QAction
+from PyQt6.QtWidgets import QMainWindow, QTextEdit, QApplication
 
 
 class Example(QMainWindow):
@@ -15,7 +15,7 @@ class Example(QMainWindow):
         textEdit = QTextEdit()
         self.setCentralWidget(textEdit)
 
-        exitAction = QAction(QIcon('exit24.png'), 'Exit', self)
+        exitAction = QAction(QIcon('web.png'), 'Exit', self)
         exitAction.setShortcut('Ctrl+Q')
         exitAction.setStatusTip('Exit application')
         exitAction.triggered.connect(self.close)
@@ -37,4 +37,4 @@ class Example(QMainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

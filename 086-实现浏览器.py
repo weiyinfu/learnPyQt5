@@ -1,11 +1,9 @@
-import PyQt5
-
-
 import sys
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
-from PyQt5.QtWebEngineWidgets import QWebEngineView
+
+from PyQt6.QtCore import *
+from PyQt6.QtGui import *
+from PyQt6.QtWebEngineWidgets import QWebEngineView
+from PyQt6.QtWidgets import *
 
 
 # 创建主窗口
@@ -20,7 +18,7 @@ class MainWindow(QMainWindow):
 
         # 创建tabwidget（多标签页面）
         self.tabWidget = QTabWidget()
-        self.tabWidget.setTabShape(QTabWidget.Triangular)
+        self.tabWidget.setTabShape(QTabWidget.TabShape.Triangular)
         self.tabWidget.setDocumentMode(True)
         self.tabWidget.setMovable(True)
         self.tabWidget.setTabsClosable(True)
@@ -123,4 +121,4 @@ if __name__ == "__main__":
     browser = MainWindow()
     browser.show()
     # 运行应用，并监听事件
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

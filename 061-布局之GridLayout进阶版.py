@@ -1,6 +1,6 @@
 import sys
-from PyQt5.QtWidgets import (QWidget, QLabel, QLineEdit,
-                             QTextEdit, QGridLayout, QApplication)
+
+from PyQt6.QtWidgets import (QWidget, QLabel, QLineEdit, QTextEdit, QGridLayout, QApplication)
 
 
 class Example(QWidget):
@@ -41,4 +41,4 @@ class Example(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

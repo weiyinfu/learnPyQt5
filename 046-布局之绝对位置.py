@@ -1,18 +1,14 @@
-
 import sys
-from PyQt5.QtWidgets import QWidget, QLabel, QApplication
+
+from PyQt6.QtWidgets import QWidget, QLabel, QApplication
 
 
 class Example(QWidget):
-
     def __init__(self):
         super().__init__()
-
         self.initUI()
 
-
     def initUI(self):
-
         lbl1 = QLabel('Zetcode', self)
         lbl1.move(15, 10)
 
@@ -28,7 +24,6 @@ class Example(QWidget):
 
 
 if __name__ == '__main__':
-
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

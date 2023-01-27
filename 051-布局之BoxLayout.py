@@ -1,20 +1,14 @@
-
-
 import sys
-from PyQt5.QtWidgets import (QWidget, QPushButton,
-                             QHBoxLayout, QVBoxLayout, QApplication)
+
+from PyQt6.QtWidgets import (QWidget, QPushButton, QHBoxLayout, QVBoxLayout, QApplication)
 
 
 class Example(QWidget):
-
     def __init__(self):
         super().__init__()
-
         self.initUI()
 
-
     def initUI(self):
-
         okButton = QPushButton("OK")
         cancelButton = QPushButton("Cancel")
 
@@ -35,7 +29,6 @@ class Example(QWidget):
 
 
 if __name__ == '__main__':
-
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

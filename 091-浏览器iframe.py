@@ -15,6 +15,7 @@ link_list = [
     {'name': 'YouTube英语精选', 'url': 'https://www.zhihu.com/people/kan-man-hua-54/zvideos'},
     {'name': 'Linvo说宇宙', 'url': 'https://www.zhihu.com/people/linvosay/zvideos'},
     {'name': '妈咪说', 'url': 'https://space.bilibili.com/223146252?spm_id_from=333.337.search-card.all.click'},
+    {'name':'抖音','url':'https://www.douyin.com/?enter=guide'}
 ]
 
 

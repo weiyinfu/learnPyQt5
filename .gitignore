@@ -10,3 +10,6 @@ yarn.lock
 *.lock
 package-lock.json
 .pytest_cach
+cmake-build-debug
+yarn-error.log
+.pytest_cache

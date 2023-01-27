@@ -1,5 +1,6 @@
 import sys
-from PyQt5.QtWidgets import QWidget, QDesktopWidget, QApplication
+
+from PyQt6.QtWidgets import QWidget, QApplication
 
 
 class Example(QWidget):
@@ -21,7 +22,10 @@ class Example(QWidget):
         # 获得窗口
         qr = self.frameGeometry()
         # 获得屏幕中心点
-        cp = QDesktopWidget().availableGeometry().center()
+        screen = QApplication.primaryScreen()
+        sz = screen.availableSize()
+        print(f"窗口大小{sz}")
+        cp = screen.availableGeometry().center()
         # 显示到屏幕中心
         qr.moveCenter(cp)
         self.move(qr.topLeft())
@@ -30,4 +34,4 @@ class Example(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())

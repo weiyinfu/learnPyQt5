@@ -1,9 +1,8 @@
-import os.path
 import sys
-
-from PyQt5.QtGui import QIcon
-from PyQt5.QtWidgets import QApplication, QWidget
 from os.path import *
+
+from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QApplication, QWidget
 
 folder = dirname(abspath(__file__))
 
@@ -19,7 +18,7 @@ class Example(QWidget):
         # 设置窗口的标题
         self.setWindowTitle('Icon')
         # 设置窗口的图标，引用当前目录下的web.png图片
-        iconPath=join(folder, 'web.png')
+        iconPath = join(folder, 'web.png')
         print(iconPath)
         self.setWindowIcon(QIcon(iconPath))
 
@@ -31,4 +30,4 @@ if __name__ == '__main__':
     # 创建应用程序和对象
     app = QApplication(sys.argv)
     ex = Example()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
